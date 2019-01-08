@@ -1,8 +1,8 @@
 /*
 * @Author: Rosen
 * @Date:   2017-05-08 15:28:19
-* @Last Modified by:   Rosen
-* @Last Modified time: 2018-03-24 09:45:59
+* @Last Modified by:   l0ganc
+* @Last Modified time: 2019-01-07 16:00:13
 */
 var webpack             = require('webpack');
 var ExtractTextPlugin   = require('extract-text-webpack-plugin');
@@ -46,7 +46,7 @@ var config = {
     },
     output: {
         path        : __dirname + '/dist/',
-        publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.happymmall.com/mmall-fe/dist/',
+        publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.luckymmall.xyz/mmall-fe/dist/',
         filename    : 'js/[name].js'
     },
     externals : {
@@ -106,7 +106,7 @@ var config = {
         inline: true,
         proxy : {
             '**/*.do' : {
-                target: 'http://test.happymmall.com',
+                target: 'http://test.luckymmall.xyz',
                 changeOrigin : true
             }
         }
